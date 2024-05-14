@@ -1,0 +1,12 @@
+body{height: 100vh;
+     background-color: black; 
+  }
+
+.header h1{line-height: 80px;}
+.header p{line-height: 21px;
+           font-weight: 200;}
+
+input{
+    background-color: #323232;
+}
+          
