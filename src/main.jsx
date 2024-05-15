@@ -16,20 +16,22 @@ import Layout from './components/Layout.jsx';
 import Errorpage from './components/ErrorPage.jsx';
 import { SigninFormTextProvider } from './contexts/SigninFormTextContext.jsx';
 import { RegisterFormTextProvider } from './contexts/RegisterFormText.jsx';
+import { AuthContextProvider } from './contexts/AuthContext.jsx';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "signup_login",
     element: 
     
-   
+  <AuthContextProvider>
 <SigninFormTextProvider>
   <RegisterFormTextProvider>
       <LoginPage/>
       </RegisterFormTextProvider>
     </SigninFormTextProvider>
-    ,
+   </AuthContextProvider>  ,
     errorElement : <Errorpage/>,
 
 
@@ -37,8 +39,8 @@ const router = createBrowserRouter([
   },
   {
 
-    path: "/user",
-    element: <Layout/>,
+    path: "",
+    element: <AuthContextProvider><PrivateRoute><Layout/></PrivateRoute></AuthContextProvider>,
     errorElement : <Errorpage/>,
 
     children : [

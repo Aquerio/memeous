@@ -1,6 +1,8 @@
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>
+      
+      <p className="text-[#FFFFFF]">Navbar</p></div>
   )
 }
 

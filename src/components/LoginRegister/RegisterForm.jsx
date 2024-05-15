@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 import { useRegisterFormText } from "../../contexts/RegisterFormText";
 
 import FormText from "../FormText/FormText";
@@ -8,6 +10,40 @@ const RegisterForm = () => {
   const { setRegisterFormSmallText, setRegisterFormLargeText, registerFormSmallText, registerFormLargeText } = useRegisterFormText();
   setRegisterFormLargeText("Create your account")
   setRegisterFormSmallText("Are you new?")
+
+  const {user, setUser, createUser} = useAuth()
+  const navigate = useNavigate()
+
+const registerUser = (e) => {
+
+  e.preventDefault()
+
+  const form = new FormData(e.currentTarget)
+
+  const email = form.get('email')
+  const displayName = form.get('displayName') 
+  const password = form.get('password')
+  const confPass = form.get('confPass')
+
+
+
+
+  createUser(email, password)
+  .then((userCredential) => {
+    // Signed up 
+    setUser(userCredential.user);
+    navigate('/')
+    
+   
+    // ...
+  })
+  .catch((error) => {
+    const errorMessage = error.message;
+    console.error(errorMessage)
+    // ..
+  });
+} 
+
   return (
 
     <>
@@ -16,26 +52,39 @@ const RegisterForm = () => {
     <FormText formLargeText = {registerFormLargeText} formSmallText={registerFormSmallText}/>
  
     
-     <form className="flex flex-col space-y-4">
+     <form className="flex flex-col space-y-4" onSubmit={registerUser}>
       <input
         type="text"
         placeholder="Display Name"
+        name="displayName"
+        id="displayName"
+        required
       />
       <input
         type="text"
-        placeholder="Username"
+        placeholder="email"
+        name="email"
+        id="email"
+        required
       />
       <input
         type="password"
         placeholder="Password"
+        name="password"
+        id="password"
+        required
       />
       <input
         type="password"
         placeholder="Confirm Password"
+        name="confPass"
+        id="confPass"
+        required
       />
       <button
         type="submit"
         className="w-full h-12 rounded-lg px-4 py-2 bg-orange-500 text-white font-bold hover:bg-orange-700"
+       
       >
         Register
       </button>
