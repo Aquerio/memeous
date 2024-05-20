@@ -1,16 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import { updateProfile } from "firebase/auth";
 import { useRegisterFormText } from "../../contexts/RegisterFormText";
 
 import FormText from "../FormText/FormText";
  import "./LoginRegister.css" 
+import { useEffect, useState } from "react";
 
 const RegisterForm = () => {
 
   const { setRegisterFormSmallText, setRegisterFormLargeText, registerFormSmallText, registerFormLargeText } = useRegisterFormText();
   setRegisterFormLargeText("Create your account")
   setRegisterFormSmallText("Are you new?")
-
   const {user, setUser, createUser} = useAuth()
   const navigate = useNavigate()
 
@@ -29,13 +30,34 @@ const registerUser = (e) => {
 
 
   createUser(email, password)
+
   .then((userCredential) => {
-    // Signed up 
-    setUser(userCredential.user);
-    navigate('/')
+    const userInfo = userCredential.user;
+
+
+    // Update user profile with displayName and photoURL
+     updateProfile(userInfo, {
+     
+      displayName: displayName
     
-   
-    // ...
+
+    })
+    .then(() =>{ 
+      
+      
+
+setUser(userInfo)
+      
+    
+    }
+  )
+     
+
+    
+    
+    if(user.displayName !== null) {navigate('/') }
+
+    
   })
   .catch((error) => {
     const errorMessage = error.message;

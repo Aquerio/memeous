@@ -17,7 +17,7 @@ const LoginForm = () => {
 
   const {setUser, logIn} = useAuth()
   const navigate = useNavigate()
-
+   
   const userLogin = (e) => {
                
     e.preventDefault()
@@ -31,7 +31,9 @@ const LoginForm = () => {
     logIn(email, password)
     .then((userCredential) => {
       // Signed in 
-      setUser(userCredential.user);
+      const userInfo = userCredential.user
+      
+      setUser(userInfo);
       navigate('/')
       // ...
     })

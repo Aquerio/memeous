@@ -1,0 +1,6 @@
+.menu_item{display: flex;
+            align-items: center;
+            gap: 8px;}
+.logo{line-height: 60px;
+       padding-top: 17px;}
+.active p .icon{color: #FF874B;}

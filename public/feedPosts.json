@@ -1,0 +1,76 @@
+[
+  {
+    "author_display_name": "John Doe",
+    "author_user_name": "RecursionMaster",
+    "raised_qcoins": 25,
+    "likes": 123,
+    "comments": 56,
+    "saved_quantity": 78,
+    "caption": "When you finally understand recursion ",
+    "photo_url": "https://cdn.britannica.com/19/213119-050-C81C786D/Grumpy-Cat-2015-memes.jpg?w=400&h=300&c=crop",
+    "ib_share": 789,
+    "group_name": "CodingHumor"
+  },
+  {
+    "author_display_name": "Emily Smith",
+    "author_user_name": "CodeAlchemist",
+    "raised_qcoins": 32,
+    "likes": 217,
+    "comments": 92,
+    "saved_quantity": 105,
+    "caption": "That feeling when your code works on the first try ",
+    "photo_url": "https://cdn.britannica.com/19/213119-050-C81C786D/Grumpy-Cat-2015-memes.jpg?w=400&h=300&c=crop",
+    "ib_share": 456,
+    "group_name": "ProgrammerProblems"
+  },
+  {
+    "author_display_name": "Alex Johnson",
+    "author_user_name": "BugSlayer",
+    "raised_qcoins": 18,
+    "likes": 76,
+    "comments": 23,
+    "saved_quantity": 42,
+    "caption": "When you finally fix a bug after hours of debugging ",
+    "photo_url": "https://cdn.britannica.com/19/213119-050-C81C786D/Grumpy-Cat-2015-memes.jpg?w=400&h=300&c=crop",
+    "ib_share": 1023,
+    "group_name": "CodingStruggles"
+  },
+  {
+    "author_display_name": "Sarah Brown",
+    "author_user_name": "MemoryMaester",
+    "raised_qcoins": 45,
+    "likes": 321,
+    "comments": 84,
+    "saved_quantity": 123,
+    "caption": "Trying to remember the name of that one variable like... ",
+    "photo_url": "https://cdn.britannica.com/19/213119-050-C81C786D/Grumpy-Cat-2015-memes.jpg?w=400&h=300&c=crop",
+    "ib_share": 754,
+    "group_name": "DeveloperHumor"
+  },
+  {
+    "author_display_name": "Michael Clark",
+    "author_user_name": "MergeMaster",
+    "raised_qcoins": 29,
+    "likes": 162,
+    "comments": 47,
+    "saved_quantity": 88,
+    "caption": "When you hear someone say 'merge conflict' during a code review ",
+    "photo_url": "https://cdn.britannica.com/19/213119-050-C81C786D/Grumpy-Cat-2015-memes.jpg?w=400&h=300&c=crop",
+    "ib_share": 589,
+    "group_name": "GitGurus"
+  },
+  {
+    "author_display_name": "Emma Taylor",
+    "author_user_name": "CSSWizard",
+    "raised_qcoins": 36,
+    "likes": 198,
+    "comments": 63,
+    "saved_quantity": 97,
+    "caption": "When you find the perfect CSS hack to fix a layout issue 🎉",
+    "photo_url": "https://cdn.britannica.com/19/213119-050-C81C786D/Grumpy-Cat-2015-memes.jpg?w=400&h=300&c=crop",
+    "ib_share": 312,
+    "group_name" : "GitGurus"
+  }
+
+]
+    

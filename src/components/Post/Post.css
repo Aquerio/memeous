@@ -1,0 +1,10 @@
+.names .disName{font-weight: 600;
+                }
+
+.names .userName{font-weight: 700;}
+
+.post_info{display: flex;
+           flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;}
